@@ -1,0 +1,30 @@
+{
+  "name": "@zhangfuxing/multi-progress",
+  "version": "1.0.0",
+  "description": "multi-line progress bar output in terminal written in nodejs",
+  "main": "index.js",
+  "dependencies": {
+    "@zhangfuxing/colors": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuxingZhang/ProgressBar.git"
+  },
+  "keywords": [
+    "node",
+    "cli",
+    "progress",
+    "progress bar",
+    "ProgressBar",
+    "multi-line",
+    "multi progress"
+  ],
+  "author": "Zhang Fu Xing <502545703@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fuxingZhang/multiProgressBar/issues"
+  },
+  "homepage": "https://github.com/fuxingZhang/multiProgressBar#readme"
+}
