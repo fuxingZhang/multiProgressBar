@@ -84,15 +84,15 @@ declare class ProgressBars {
 ```  
 
 ## Screenshots
-
+default  
 ![default](./screenshots/default.gif) 
-
+complete  
 ![complete](./screenshots/complete.gif) 
-
+display: What is displayed and display order
 ![display](./screenshots/display.gif) 
-
+console: interrupt the progress bar and write a message above it  
 ![console](./screenshots/console.gif)  
-
+clear: clear the bar on completion  
 ![clear](./screenshots/clear.gif)  
 
 More screenshots in the `screenshots` folder.
