@@ -101,15 +101,19 @@ class ProgressBars {
     const renderStr = this.#strs.join("\n") + "\x1b[?25l";
 
     if (this.lastStr !== renderStr) {
-      this.stream.moveCursor(0, -this.#lastRows + 1);
-      this.stream.cursorTo(0);
-      this.stream.clearScreenDown();
+      this._clearScreenDown();
       this.stream.write(renderStr);
       this.lastStr = renderStr;
       this.#lastRows = this.#strs.length;
     }
 
     if (end) this.end();
+  }
+
+  _clearScreenDown() {
+    this.stream.moveCursor(0, -this.#lastRows + 1);
+    this.stream.cursorTo(0);
+    this.stream.clearScreenDown();
   }
 
   /**
@@ -121,9 +125,7 @@ class ProgressBars {
     this.#end = true;
 
     if (this.clear) {
-      this.stream.moveCursor(0, -this.#lastRows + 1);
-      this.stream.cursorTo(0);
-      this.stream.clearScreenDown();
+      this._clearScreenDown();
     } else {
       this.stream.write('\n');
     }
@@ -138,9 +140,7 @@ class ProgressBars {
    * @api public
    */
   console(message) {
-    this.stream.moveCursor(0, -this.#lastRows + 1);
-    this.stream.cursorTo(0);
-    this.stream.clearScreenDown();
+    this._clearScreenDown();
     this.stream.write(`${message}`);
     this.stream.write('\n');
     this.stream.write(this.lastStr);
