@@ -10,7 +10,7 @@ $ npm i @zhangfuxing/multi-progress
 ## Useage  
 
 ```js
-const ProgressBar = require('@zhangfuxing/multi-progress');
+const ProgressBars = require('@zhangfuxing/multi-progress');
 
 const title = 'download files';
 const total = 100;
