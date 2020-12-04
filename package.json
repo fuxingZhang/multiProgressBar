@@ -1,6 +1,6 @@
 {
   "name": "@zhangfuxing/multi-progress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "multi-line progress bar output in terminal written in nodejs",
   "main": "index.js",
   "dependencies": {

@@ -54,9 +54,9 @@ declare class ProgressBars {
    * "render" the progress bar with completed and optional `total`
    * 
    *  - `bars` progress bars
-   *  - `bars.completed` completed value
-   *  - `bars.total` optional, total number of ticks to complete, default: 100
-   *  - `bars.text` optional, text displayed per ProgressBar, default: ''
+   *    - `completed` completed value
+   *    - `total` optional, total number of ticks to complete, default: 100
+   *    - `text` optional, text displayed per ProgressBar, default: ''
    */
   render(bars: []): void;
 
