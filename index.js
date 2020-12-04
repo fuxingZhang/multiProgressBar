@@ -138,15 +138,11 @@ class ProgressBars {
    * @api public
    */
   console(message) {
-    // clear the current line
-    this.stream.clearLine(0);
-    // move the cursor to the start of the line
+    this.stream.moveCursor(0, -this.#lastRows + 1);
     this.stream.cursorTo(0);
-    // write the message text
+    this.stream.clearScreenDown();
     this.stream.write(`${message}`);
-    // wrap after writing the message
     this.stream.write('\n');
-    // re-display the progress bar with its lastStr
     this.stream.write(this.lastStr);
   };
 }
