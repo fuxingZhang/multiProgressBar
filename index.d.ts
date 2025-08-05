@@ -37,6 +37,14 @@ interface ProgressBarOptions {
   clear?: boolean;
 }
 
+interface BarState {
+  completed: number;
+  /** optional, total number of ticks to complete, default: 100 */
+  total?: number;
+  /** text displayed per ProgressBar, default: '' */
+  text?: string;
+}
+
 declare class ProgressBars {
   /**
    * Options:
@@ -52,13 +60,13 @@ declare class ProgressBars {
 
   /**
    * "render" the progress bar with completed and optional `total`
-   * 
+   *
    *  - `bars` progress bars
    *    - `completed` completed value
    *    - `total` optional, total number of ticks to complete, default: 100
    *    - `text` optional, text displayed per ProgressBar, default: ''
    */
-  render(bars: []): void;
+  render(bars: BarState[]): void;
 
   /**
    * interrupt the progress bar and write a message above it
@@ -71,4 +79,5 @@ declare class ProgressBars {
   end(): void;
 }
 
-export = ProgressBars
+export = ProgressBars;
+
